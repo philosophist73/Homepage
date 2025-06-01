@@ -53,6 +53,12 @@
       border-color: #007acc;
       box-shadow: 0 0 0 0.15rem rgba(0, 122, 204, 0.25);
     }
+    .flex {
+       display: flex;
+    }
+    .flex > .col {
+      margin-left: 8px;
+    }
   </style>
 
 	
@@ -216,15 +222,15 @@
 	
 		
 			
-	<section>
+	<div>
+    <form>
     <div class="container">
       <div class="form-wrapper">
         <div class="card shadow">
           <div class="card-body">
             <h3 class="card-title text-center mb-4">Registration</h3>
-            <form>
               <!-- Row 1: Name Fields -->
-              <div class="row mb-3">
+              <div class="flex mb-3">
                 <div class="col">
                   <input type="text" class="form-control" placeholder="First Name" name="firstName" required>
                 </div>
@@ -246,16 +252,40 @@
                 <input type="text" class="form-control" placeholder="Passport Number" name="passport" required>
               </div>
 
+              <hr />
+              <br />
+
+              <div class="mb-2">
+                <h4>Address</h4>
+              </div>
+
+              <!-- Row 4: Address Fields -->
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Street Address" name="streetAddress" required>
+              </div>
+
+              <div class="flex mb-4">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="City" name="city" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="State" name="state" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Zip Code" name="zipcode" required>
+                </div>
+              </div>
+
               <!-- Row 4: Register Button -->
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Register</button>
               </div>
-            </form>
           </div>
         </div>
       </div>
     </div>
-	</section>
+    </form>
+	</div>
 
 			
 	
